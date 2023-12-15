@@ -3,10 +3,12 @@
 import random
 
 def play():
-    player = input("Type s for scissors, r for rock or p for paper: ")
+    print("Type s for scissors, r for rock or p for paper: ")
+    player = input("Player: ")
     player = player.lower()
     if player == "r" or player == "p" or player == "s":
         computer = random.choice(["r","p","s"])
+        print("Computer:",computer)
         if computer == player:
             return "Draw! \nPlay Again..."
         if ((computer == "r" and player == "p") or  (computer == "p" and player == "s") or  (computer == "s" and player == "r")):
